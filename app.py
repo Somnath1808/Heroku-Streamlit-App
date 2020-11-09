@@ -77,10 +77,12 @@ def main():
         if 'ROC Curve' in matrics_list:
             st.subheader("ROC Curve")
             plot_roc_curve(model, X_test,y_test)
+            st.set_option('deprecation.showPyplotGlobalUse', False)
             st.pyplot()
         if 'Precision-Recall Curve' in matrics_list:
             st.subheader("Precision Recall")
             plot_precision_recall_curve(model,X_test,y_test)
+            st.set_option('deprecation.showPyplotGlobalUse', False)
             st.pyplot()
 
     df_load = load_data()
